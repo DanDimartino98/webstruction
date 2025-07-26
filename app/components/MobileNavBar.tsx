@@ -69,9 +69,11 @@ export default function MobileNavBar() {
         boxShadow: isSticky ? '0 2px 12px 0 rgba(0,0,0,0.07)' : 'none',
       }}>
         <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center', height: 56 }}>
-          <Image src="/logo.png" alt="Logo" width={56} height={56} />
+          <a href="/" style={{ textDecoration: "none" }}>
+            <Image src="/logo.png" alt="Logo" width={56} height={56} />
+          </a>
         </div>
-        <button style={{ flexShrink: 0, height: 48, padding: '0 24px', borderRadius: 8, border: '1px solid #ececec', background: '#fff', color: '#5d5c59', fontWeight: 600, fontSize: 18, fontFamily: 'var(--font-inter)', cursor: 'pointer', transition: 'background 0.2s', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', marginRight: 0 }}>Get Started</button>
+        <a href="/getstarted" style={{ flexShrink: 0, height: 48, padding: '0 24px', borderRadius: 8, border: '1px solid #ececec', background: '#fff', color: '#5d5c59', fontWeight: 600, fontSize: 18, fontFamily: 'var(--font-inter)', cursor: 'pointer', transition: 'background 0.2s', whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', marginRight: 0, textDecoration: 'none' }}>Get Started</a>
       </nav>
       {/* Spacer for nav bar height only */}
       <div style={{ height: 72 }} />

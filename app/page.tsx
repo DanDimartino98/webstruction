@@ -5,33 +5,33 @@ const serviceCards = [
   {
     title: "Website",
     points: [
-      "One page website designed to convert customers.",
+      "Custom website tailored to convert customers.",
       "Modern, professional look tailored for trades.",
       "Mobile-friendly and fast loading.",
     ],
   },
   {
-    title: "Hosting",
-    points: [
-      "We host the website for you, hassle-free.",
-      "Free domain included, or use your own.",
-      "SSL certificate and security included.",
-    ],
-  },
-  {
     title: "Maintenance",
     points: [
+      "Free hosting",
+      "Free domain included, or use your own.",
       "Update your site with new images or text anytime.",
-      "No technical skills required.",
-      "We handle all the technical stuff for you.",
     ],
   },
   {
-    title: "Support",
+    title: "SEO",
+    points: [
+      "Rank on Google and get more leads",
+      "Website SEO optimised",
+      "Stand out locally",
+    ],
+  },
+  {
+    title: "No Contracts",
     points: [
       "Contact us anytime for help or changes.",
       "Cancel anytime, no lock-in.",
-      "Fast response if you have website issues.",
+      "No lump sum, just £49pm",
     ],
   },
 ];
@@ -66,12 +66,12 @@ export default function Home() {
       {/* Mobile Hero Section */}
       <section className="mobile-hero-section mobile-only" style={{ width: '100%', padding: '0', background: '#fff' }}>
         {/* Hero Text */}
-        <div style={{ padding: '32px 16px 0 16px', textAlign: 'left' }}>
+        <div style={{ padding: '32px 32px 0 32px', textAlign: 'left' }}>
           <h1 style={{ fontSize: '3rem', fontWeight: 700, color: '#171717', marginBottom: 18, fontFamily: 'var(--font-inter)', lineHeight: 1.15 }}>
             Get A Website<br />That Helps You<br />Get More Customers.
           </h1>
-          <p style={{ fontSize: '1.5rem', color: '#5d5c59', marginBottom: 28, fontWeight: 400, fontFamily: 'var(--font-inter)', lineHeight: 1.4 }}>Specialised in creating high converting websites for tradespeople without a lump sum and easy management.</p>
-          <button style={{ background: '#171717', color: '#fff', border: 'none', borderRadius: 12, padding: '16px 36px', fontSize: '1.1rem', fontWeight: 600, fontFamily: 'var(--font-inter)', cursor: 'pointer', marginBottom: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', transition: 'background 0.2s' }}>Get Started</button>
+          <p style={{ fontSize: '1.5rem', color: '#5d5c59', marginBottom: 28, fontWeight: 400, fontFamily: 'var(--font-inter)', lineHeight: 1.4 }}>We're not just building websites — we're helping trades win more clients and grow their business.</p>
+          <a href="/getstarted" style={{ display: 'inline-block', background: '#171717', color: '#fff', border: 'none', borderRadius: 12, padding: '16px 36px', fontSize: '1.1rem', fontWeight: 600, fontFamily: 'var(--font-inter)', cursor: 'pointer', marginBottom: 16, boxShadow: '0 2px 8px rgba(0,0,0,0.04)', transition: 'background 0.2s', textDecoration: 'none' }}>Get Started</a>
           {/* Review Section (moved under button for mobile) */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8, marginBottom: 12 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
@@ -83,7 +83,7 @@ export default function Home() {
               <span style={{ color: '#171717', fontWeight: 600, fontSize: '1.1rem', marginLeft: 8 }}>Rated 4.8/5</span>
             </div>
             <div style={{ color: '#5d5c59', fontSize: '1rem', marginTop: 4, textAlign: 'left' }}>
-              Generated 1000+ articles for customers worldwide
+              Generated 100+ websites for customers worldwide
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function Home() {
         flexDirection: 'column',
         alignItems: 'flex-start',
         justifyContent: 'center',
-        padding: '80px 0 40px 48px',
+        padding: '80px 0 40px 150px',
         width: '100%',
         textAlign: 'left',
       }}>
@@ -119,10 +119,12 @@ export default function Home() {
           marginRight: 0,
           textAlign: 'left',
         }}>
-          Specialised in creating high converting websites for tradespeople without a lump sum and easy management.
+          We're not just building websites — we're helping trades win more clients and grow their business.
         </p>
-        <button
+        <a
+          href="/getstarted"
           style={{
+            display: 'inline-block',
             background: '#171717',
             color: '#fff',
             border: 'none',
@@ -136,11 +138,12 @@ export default function Home() {
             boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
             transition: 'background 0.2s',
             alignSelf: 'flex-start',
+            textDecoration: 'none',
           }}
           className="hero-get-started"
         >
           Get Started
-        </button>
+        </a>
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 8 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             {/* 5 stars */}
@@ -152,12 +155,13 @@ export default function Home() {
             <span style={{ color: '#171717', fontWeight: 600, fontSize: '1.1rem', marginLeft: 8 }}>Rated 4.8/5</span>
           </div>
           <div style={{ color: '#5d5c59', fontSize: '1rem', marginTop: 4, textAlign: 'left' }}>
-            Generated 1000+ articles for customers worldwide
+            Generated 100+ websites for customers worldwide
           </div>
         </div>
       </section>
       {/* Service Section */}
       <section
+        id="service"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -176,7 +180,7 @@ export default function Home() {
           fontFamily: 'var(--font-inter)',
           lineHeight: 1.1,
         }}>
-          Stop Paying Thousands For A Website
+          We build solutions that help trades get hired.
         </h2>
         <p style={{
           fontSize: '1.35rem',
@@ -186,7 +190,7 @@ export default function Home() {
           maxWidth: 900,
           margin: '0 auto',
         }}>
-          Proffesional tradesman dont need to spend thousands on a new website. And building a website isnt as simple as dragging and dropping features onto a page. Designing a page that converts customers takes skill, just like how customers call you to solve their problems. So what do you get with us?
+          Starting a trade business is tough — we get it. At Webstruction, we help new businesses get found, build trust, and start winning work. We don't just build websites — we create smart, tailored solutions to help you grow with confidence.
         </p>
       </section>
       {/* Service Cards Section */}
@@ -241,7 +245,7 @@ export default function Home() {
                     color: '#5d5c59',
                     fontWeight: 400,
                     fontFamily: 'var(--font-inter)',
-                    marginBottom: 18,
+                    marginBottom: idx === card.points.length - 1 ? 0 : 18,
                   }}>
                     <TickIcon />
                     <span>{point}</span>
@@ -254,6 +258,7 @@ export default function Home() {
       </div>
       {/* Optimised Landing Page Section */}
       <section
+        id="product"
         style={{
           display: 'flex',
           flexDirection: 'column',
@@ -285,274 +290,37 @@ export default function Home() {
           Get a free website like this tailored to your business and brand.
         </p>
       </section>
-      {/* Feature Cards Section */}
+      {/* Video Section */}
       <section
-        className="feature-cards-section"
-        // removed inline style for flexDirection: 'row' so CSS can control layout
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '64px 16px 64px 16px',
+          width: '100%',
+        }}
       >
-        {/* Card 1 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Capture Customer Attention Instantly
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            Prominent message bar displaying your contact info. Your logo is always visible in the navigation bar, alongside a clear menu for seamless navigation. The header area features a compelling hook to keep visitors engaged. A video or photo of your work as a dynamic background showcases your brand. This encourages customers to scroll down and explore your services.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/1.png" alt="Feature 1" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
-        </div>
-        {/* Card 2 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Showcase Your Services
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            Highlight your work with beautifully designed, scrollable shapes. Each image is tied directly to your service, giving customers a clear understanding of what you offer and what to expect. This engaging layout makes it easy for visitors to browse your services and see the quality you provide at a glance.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/2.png" alt="Feature 2" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
-        </div>
-      </section>
-      {/* Second row of feature cards */}
-      <section
-        className="feature-cards-section"
-        // removed inline style for flexDirection: 'row' so CSS can control layout
-      >
-        {/* Card 3 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Put Your Work in the Spotlight
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            Showcase your best work with a beautiful slideshow. Customers can easily slide between photos to see the quality and variety of your projects, helping them understand the results you can deliver. This engaging gallery builds trust and makes your business stand out.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/3.png" alt="Feature 3" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
-        </div>
-        {/* Card 4 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Highlight What Customers Are Saying
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            We import real reviews from CheckATrade, letting potential customers see the great experiences others have had with your business. This builds trust and gives visitors confidence that they’ll get a fantastic job done by you. Positive feedback from real people helps turn interest into action.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/4.png" alt="Feature 4" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
-        </div>
-      </section>
-      {/* Third row of feature cards */}
-      <section
-        className="feature-cards-section"
-        // removed inline style for flexDirection: 'row' so CSS can control layout
-      >
-        {/* Card 5 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Help Customers Find Answers
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            Add up to 5 of your most frequently asked questions, so customers get instant answers. This reduces repetitive inquiries in your inbox and lets you focus on what you do best—delivering great service. Make it easy for customers to get the info they need, fast.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/5.png" alt="Feature 5" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
-        </div>
-        {/* Card 6 */}
-        <div
-          style={{
-            flex: 1,
-            background: '#fff',
-            border: '1px solid #e5e5e5',
-            borderRadius: 28,
-            padding: '64px 56px',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'flex-start',
-            minWidth: 0,
-            maxWidth: 800,
-          }}
-        >
-          <h3 style={{
-            fontSize: '2.3rem',
-            fontWeight: 700,
-            color: '#171717',
-            marginBottom: 18,
-            fontFamily: 'var(--font-inter)',
-            textAlign: 'left',
-            width: '100%',
-          }}>
-            Receive Quote Requests Instantly
-          </h3>
-          <p style={{
-            fontSize: '1.25rem',
-            color: '#5d5c59',
-            fontWeight: 500,
-            fontFamily: 'var(--font-inter)',
-            marginBottom: 40,
-            textAlign: 'left',
-            maxWidth: 640,
-            width: '100%',
-          }}>
-            Customers can fill out a simple form to request a quote for their job instantly. Every message goes straight to your email inbox, so you never miss an opportunity. It’s fast, easy, and removes all friction between you and your next customer.
-          </p>
-          <div className="feature-card-image" style={{ borderRadius: 22, overflow: 'hidden', marginBottom: 0 }}>
-            <Image src="/cards/6.png" alt="Feature 6" width={640} height={500} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 22 }} />
-          </div>
+        <div style={{
+          maxWidth: 1200,
+          width: '100%',
+          borderRadius: 18,
+          overflow: 'hidden',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+        }}>
+          <video
+            controls
+            loop
+            autoPlay
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+            }}
+          >
+            <source src="/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
       {/* Call to Action Section */}
@@ -588,8 +356,10 @@ export default function Home() {
         }}>
           Our websites are expertly designed to look great on both desktop and mobile, giving your customers a seamless experience on any device.
         </p>
-        <button
+        <a
+          href="/getstarted"
           style={{
+            display: 'inline-block',
             background: '#171717',
             color: '#fff',
             border: 'none',
@@ -601,13 +371,15 @@ export default function Home() {
             cursor: 'pointer',
             boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
             transition: 'background 0.2s',
+            textDecoration: 'none',
           }}
         >
           Get Started Today
-        </button>
+        </a>
       </section>
       {/* Pricing Section */}
       <section
+        id="pricing"
         style={{
           background: '#171717',
           width: '100%',
@@ -675,17 +447,17 @@ export default function Home() {
               <span style={{ color: '#bdbdbd', fontSize: '1.1rem', marginLeft: 6 }}>/month</span>
             </div>
             <div style={{ color: '#ff6b6b', fontWeight: 600, marginBottom: 18 }}>Save 50% on this plan</div>
-            <button style={{ width: '100%', background: '#fff', color: '#171717', border: 'none', borderRadius: 8, padding: '16px 0', fontSize: '1.15rem', fontWeight: 700, marginBottom: 12, marginTop: 8, cursor: 'pointer' }}>Get Started Today</button>
+            <a href="/getstarted" style={{ display: 'block', width: '100%', background: '#fff', color: '#171717', border: 'none', borderRadius: 8, padding: '16px 0', fontSize: '1.15rem', fontWeight: 700, marginBottom: 12, marginTop: 8, cursor: 'pointer', textDecoration: 'none', textAlign: 'center' }}>Get Started Today</a>
             <div style={{ color: '#bdbdbd', fontSize: '0.98rem', marginBottom: 18 }}>Cancel anytime, no questions asked.</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, width: '100%' }}>
               {[
-                'Get personalized complete keywords list',
-                'Receive 1 fresh article every day automatically',
-                'Generate 3k-word, human-like articles that rank',
-                'Get automatic AI images, videos & rich content',
-                'Guarantee perfect SEO with built-in scoring & editor',
-                'Naturally promote your business in every article',
-                'Publish consistently by connecting your website',
+                'Get a personalised website for your business',
+                'Website designed specifically to convert more customers',
+                'Rank on Google with expert SEO strategies',
+                'No Contract. Cancel anytime.',
+                'Hosting and maintenance included',
+                'Stand out infront of your competitors',
+                'Increase jobs and online presence',
                 'Reach global audiences with 50+ language support',
               ].map((feature, idx) => (
                 <li key={idx} style={{ display: 'flex', alignItems: 'center', fontSize: '1.05rem', color: '#fff', marginBottom: 14 }}>
@@ -718,7 +490,7 @@ export default function Home() {
               <div style={{ color: '#ededed', fontSize: '1.08rem', fontStyle: 'italic', marginBottom: 10 }}>
                 “I was amazed at how quickly my website was up and running. The team handled everything, and my customers love how easy it is to find info and request a quote. I wish I’d done this sooner!”
               </div>
-              <div style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>Jennifer Park</div>
+              <div style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>Marcus Browne</div>
               <div style={{ color: '#bdbdbd', fontSize: '0.98rem' }}>Founder</div>
             </div>
           </div>
@@ -726,6 +498,7 @@ export default function Home() {
       </section>
       {/* FAQ Section */}
       <section
+        id="faq"
         style={{
           background: '#fafafa',
           width: '100%',

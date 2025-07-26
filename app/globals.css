@@ -23,6 +23,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Responsive visibility classes */
@@ -138,6 +139,13 @@ body {
   height: 500px;
   border-radius: 22px;
   overflow: hidden;
+}
+
+/* Contact form section responsive padding */
+@media (max-width: 767px) {
+  .contact-form-section {
+    padding: 100px 16px 80px 16px !important;
+  }
 }
 
 @media (max-width: 600px) {

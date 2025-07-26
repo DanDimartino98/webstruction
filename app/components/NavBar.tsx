@@ -3,7 +3,12 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const navLinks = ["Service", "Reviews", "Pricing", "FAQ"];
+const navLinks = [
+  { text: "Service", href: "#service" },
+  { text: "Product", href: "#product" },
+  { text: "Pricing", href: "#pricing" },
+  { text: "FAQ", href: "#faq" }
+];
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,13 +57,16 @@ export default function NavBar() {
         >
           {/* Logo */}
           <div style={{ display: "flex", alignItems: "center", height: 56 }}>
-            <Image src="/logo.png" alt="Logo" width={60} height={60} style={{ marginRight: 12 }} />
+            <a href="/" style={{ textDecoration: "none" }}>
+              <Image src="/logo.png" alt="Logo" width={60} height={60} style={{ marginRight: 12 }} />
+            </a>
           </div>
           {/* Links */}
           <div style={{ display: "flex", gap: 32, flex: 1, justifyContent: "center" }}>
             {navLinks.map((link) => (
-              <span
-                key={link}
+              <a
+                key={link.text}
+                href={link.href}
                 style={{
                   color: "#5d5c59",
                   fontSize: 20,
@@ -66,15 +74,17 @@ export default function NavBar() {
                   fontFamily: 'var(--font-inter)',
                   cursor: "pointer",
                   transition: "color 0.2s",
+                  textDecoration: "none",
                 }}
                 className="nav-link"
               >
-                {link}
-              </span>
+                {link.text}
+              </a>
             ))}
           </div>
           {/* Get Started Button */}
-          <button
+          <a
+            href="/getstarted"
             style={{
               marginLeft: 32,
               marginRight: 24, // add space to the right of the button
@@ -88,11 +98,12 @@ export default function NavBar() {
               fontFamily: 'var(--font-inter)',
               cursor: "pointer",
               transition: "background 0.2s",
+              textDecoration: "none",
             }}
             className="get-started-btn"
           >
             Get Started
-          </button>
+          </a>
         </div>
         <style jsx>{`
           @media (max-width: 767px) {
