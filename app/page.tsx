@@ -31,7 +31,7 @@ const serviceCards = [
     points: [
       "Contact us anytime for help or changes.",
       "Cancel anytime, no lock-in.",
-      "No lump sum, just £49pm",
+                      "No lump sum, just £49.99pm",
     ],
   },
 ];
@@ -190,7 +190,7 @@ export default function Home() {
           maxWidth: 900,
           margin: '0 auto',
         }}>
-          Starting a trade business is tough — we get it. At Webstruction, we help new businesses get found, build trust, and start winning work. We don't just build websites — we create smart, tailored solutions to help you grow with confidence.
+          Starting a trade business is tough, we get it. At Webstruction, we help trades get found, build trust, and start winning work. We don't just build websites, we create smart, tailored solutions to help you grow with confidence.
         </p>
       </section>
       {/* Service Cards Section */}
@@ -268,6 +268,7 @@ export default function Home() {
           width: '100%',
           textAlign: 'center',
         }}
+        className="product-section"
       >
         <h2 style={{
           fontSize: '2.5rem',
@@ -300,27 +301,42 @@ export default function Home() {
           padding: '64px 16px 64px 16px',
           width: '100%',
         }}
+        className="video-section"
       >
         <div style={{
           maxWidth: 1200,
           width: '100%',
           borderRadius: 18,
           overflow: 'hidden',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         }}>
-          <video
-            controls
-            loop
-            autoPlay
-            style={{
-              width: '100%',
-              height: 'auto',
-              display: 'block',
-            }}
-          >
-            <source src="/video/video.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          {/* Mobile Image */}
+          <div className="mobile-only">
+            <Image
+              src="/template.png"
+              alt="Website Template Preview"
+              width={1200}
+              height={800}
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+              }}
+            />
+          </div>
+          {/* Desktop Image */}
+          <div className="desktop-only">
+            <Image
+              src="/desktopDesign.png"
+              alt="Desktop Website Design Preview"
+              width={1200}
+              height={800}
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+              }}
+            />
+          </div>
         </div>
       </section>
       {/* Call to Action Section */}
@@ -397,7 +413,7 @@ export default function Home() {
           </p>
         </div>
         {/* Features Row */}
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 48, marginBottom: 64, flexWrap: 'wrap' }}>
+        <div className="desktop-only" style={{ display: 'flex', justifyContent: 'center', gap: 48, marginBottom: 64, flexWrap: 'wrap' }}>
           {/* Feature 1 */}
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minWidth: 180 }}>
             {/* Icon: Website (web page SVG) */}
@@ -443,7 +459,7 @@ export default function Home() {
             <div style={{ color: '#bdbdbd', fontSize: '1.1rem', marginBottom: 24 }}>Everything you need to have a professional website</div>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
               <span style={{ color: '#bdbdbd', fontSize: '2rem', textDecoration: 'line-through', marginRight: 12 }}>£99</span>
-              <span style={{ fontSize: '2.5rem', fontWeight: 700 }}>£49</span>
+              <span style={{ fontSize: '2.5rem', fontWeight: 700 }}>£49.99</span>
               <span style={{ color: '#bdbdbd', fontSize: '1.1rem', marginLeft: 6 }}>/month</span>
             </div>
             <div style={{ color: '#ff6b6b', fontWeight: 600, marginBottom: 18 }}>Save 50% on this plan</div>
@@ -473,7 +489,7 @@ export default function Home() {
           <div style={{ background: '#232323', border: '1px solid #333', borderRadius: 18, padding: '48px 40px', minWidth: 480, maxWidth: 640, flex: 1.2, color: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', marginBottom: 24 }}>
             <div style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: 8 }}>How it Works</div>
             <div style={{ color: '#ededed', fontSize: '1.08rem', marginBottom: 18 }}>
-              Getting started is easy — just click “Get Started” and send us your photos, customer reviews, and basic business information like your service areas, offerings, and any common questions you receive. After that, we’ll provide a simple Stripe payment link for just £49 per month. Once your payment is confirmed, we’ll deliver your professional website within 72 hours. Need to update photos, reviews, or any other content? Just send us the new details, and we’ll make the changes quickly and hassle-free.
+              Getting started is simple — just click "Get Started" to book your free consultation. We'll discuss your goals, vision, and what you need from your website. If you're happy to move forward, we'll begin the design process. You only pay once you're completely satisfied with the final result. Our all-inclusive package — covering your website, hosting, and ongoing maintenance — is just £49.99 per month with no hidden fees. Need to update photos, reviews, or other content? Just send us the details, and we'll make the changes quickly and hassle-free. And of course, you can cancel anytime.
             </div>
             <div style={{ color: '#bdbdbd', fontSize: '1.02rem', marginBottom: 24 }}>
               Tradespeople earning £500–£1,000 per job only need one new customer from your website to cover the cost. Unlike costly designers charging £5,000+ or DIY sites like Wix costing £119/month, we offer an affordable, hassle-free website built just for you.

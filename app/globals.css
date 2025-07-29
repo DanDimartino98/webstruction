@@ -146,6 +146,12 @@ body {
   .contact-form-section {
     padding: 100px 16px 80px 16px !important;
   }
+  .product-section {
+    padding: 64px 16px 16px 16px !important;
+  }
+  .video-section {
+    padding: 16px 16px 64px 16px !important;
+  }
 }
 
 @media (max-width: 600px) {
