@@ -12,7 +12,7 @@ export default function GetStarted() {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Show loading state
@@ -21,19 +21,23 @@ export default function GetStarted() {
     submitButton.textContent = 'Sending...';
     submitButton.disabled = true;
     
-    // Submit form data to FormSubmit service
-    const formDataToSend = new FormData();
-    formDataToSend.append('name', formData.name);
-    formDataToSend.append('email', formData.email);
-    formDataToSend.append('trade', formData.trade);
-    formDataToSend.append('message', formData.message);
-    formDataToSend.append('subject', `New Website Request from ${formData.name}`);
-    
-    fetch('https://formsubmit.co/hughesdaniel98@gmail.com', {
-      method: 'POST',
-      body: formDataToSend,
-    })
-    .then(response => {
+    try {
+      // Submit form data to our API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          trade: formData.trade,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
       if (response.ok) {
         alert('Thank you! Your request has been sent successfully. We\'ll get back to you as soon as possible.');
         // Reset form
@@ -44,18 +48,16 @@ export default function GetStarted() {
           message: ""
         });
       } else {
-        throw new Error('Failed to send message');
+        throw new Error(result.error || 'Failed to send message');
       }
-    })
-    .catch(error => {
+    } catch (error) {
       console.error('Error:', error);
       alert('Sorry, there was an error sending your message. Please try again or contact us directly.');
-    })
-    .finally(() => {
+    } finally {
       // Reset button state
       submitButton.textContent = originalText;
       submitButton.disabled = false;
-    });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
