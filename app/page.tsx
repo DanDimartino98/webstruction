@@ -49,6 +49,8 @@ function TickIcon() {
         background: '#7a756c',
         marginRight: 14,
         flexShrink: 0,
+        minWidth: 28,
+        minHeight: 28,
       }}
     >
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -477,8 +479,22 @@ export default function Home() {
                 'Reach global audiences with 50+ language support',
               ].map((feature, idx) => (
                 <li key={idx} style={{ display: 'flex', alignItems: 'center', fontSize: '1.05rem', color: '#fff', marginBottom: 14 }}>
-                  <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 22, height: 22, borderRadius: '50%', background: '#1db954', marginRight: 12 }}>
-                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 7.5L6 10.5L11 4.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <span style={{ 
+                    display: 'inline-flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    width: 24, 
+                    height: 24, 
+                    borderRadius: '50%', 
+                    background: '#1db954', 
+                    marginRight: 12,
+                    flexShrink: 0,
+                    minWidth: 24,
+                    minHeight: 24
+                  }}>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 7.5L6 10.5L11 4.5" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </span>
                   {feature}
                 </li>
@@ -504,10 +520,10 @@ export default function Home() {
                 ))}
               </div>
               <div style={{ color: '#ededed', fontSize: '1.08rem', fontStyle: 'italic', marginBottom: 10 }}>
-                “I was amazed at how quickly my website was up and running. The team handled everything, and my customers love how easy it is to find info and request a quote. I wish I’d done this sooner!”
+                "WebStruction delivered a sleek and functional website for me. They listened to my brief and tailor made a site that showcases our work and testimonials. The site was created quickly and to a high standard. Would highly recommend to other construction business owners."
               </div>
-              <div style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>Marcus Browne</div>
-              <div style={{ color: '#bdbdbd', fontSize: '0.98rem' }}>Founder</div>
+              <div style={{ color: '#fff', fontWeight: 600, fontSize: '1.05rem' }}>DKLandscapes</div>
+              <div style={{ color: '#bdbdbd', fontSize: '0.98rem' }}>Owner</div>
             </div>
           </div>
         </div>
